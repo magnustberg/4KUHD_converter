@@ -1,5 +1,4 @@
 #Developed by Magnus Berg, 2025 for the University of Toronto, Mississauga Digital Scholarship Unit#
-#Are you telling me a TRANS coded this film?
 
 import os
 import FreeSimpleGUI as sg
@@ -76,7 +75,7 @@ def output_fullCheck(output_dir):
 	
 
 def upscale(input_dir, output_dir, file_number):
-#performs the upscale operation
+#check the aspect ratio and performs the upscale operation
 	status_number = 0
 	try:
 		for filename in os.listdir(input_dir):
@@ -91,73 +90,272 @@ def upscale(input_dir, output_dir, file_number):
 					aspect_ratio = str(round(ratio_prep,2))
 
 					if aspect_ratio=='0.54':
-						target_aspectRatio = '1215x2160'
+						target_aspectRatio = '4096x7585'
+						target = True
+					elif aspect_ratio=='0.56':
+						target_aspectRatio = '4096x7282'
 						target = True
 					elif aspect_ratio=='0.67':
-						target_aspectRatio = '1440x2160'
+						target_aspectRatio = '4096x6113'
+						target = True
+					elif aspect_ratio=='0.68':
+						target_aspectRatio = '4096x6024'
 						target = True
 					elif aspect_ratio=='0.80':
-						target_aspectRatio = '1728x2160'
+						target_aspectRatio = '4096x5120'
+						target = True
+					elif aspect_ratio=='0.89':
+						target_aspectRatio = '4096x4602'
+						target = True
+					elif aspect_ratio=='0.91':
+						target_aspectRatio = '4096x3727'
 						target = True
 					elif aspect_ratio=='1.00':
-						target_aspectRatio = '2160x2160'
+						target_aspectRatio = '4096x4096'
+						target = True
+					elif aspect_ratio=='1.10':
+						target_aspectRatio = '4096x3724'
+						target = True
+					elif aspect_ratio=='1.20':
+						target_aspectRatio = '4096x3413'
 						target = True
 					elif aspect_ratio=='1.25':
-						target_aspectRatio = '2700x2160'
+						target_aspectRatio = '4096x3277'
+						target = True
+					elif aspect_ratio=='1.30':
+						target_aspectRatio = '4096x3151'
+						target = True
+					elif aspect_ratio=='1.31':
+						target_aspectRatio = '4096x3127'
+						target = True
+					elif aspect_ratio=='1.32':
+						target_aspectRatio = '4096x3103'
 						target = True
 					elif aspect_ratio=='1.33':
-						target_aspectRatio = '2880x2160'
+						target_aspectRatio = '4096x3080'
+						target = True
+					elif aspect_ratio=='1.34':
+						target_aspectRatio = '4096x3057'
+						target = True
+					elif aspect_ratio=='1.36':
+						target_aspectRatio = '4096x3012'
+						target = True
+					elif aspect_ratio=='1.37':
+						target_aspectRatio = '4096x2990'
+						target = True
+					elif aspect_ratio=='1.38':
+						target_aspectRatio = '4096x2968'
+						target = True 
+					elif aspect_ratio=='1.40':
+						target_aspectRatio = '4096x2926'
+						target = True
+					elif aspect_ratio=='1.43':
+						target_aspectRatio = '4096x2864'
+						target = True
+					elif aspect_ratio=='1.44':
+						target_aspectRatio = '4096x2844'
+						target = True
+					elif aspect_ratio=='1.45':
+						target_aspectRatio = '4096x2825'
+						target = True
+					elif aspect_ratio=='1.48':
+						target_aspectRatio = '4096x2768'
 						target = True
 					elif aspect_ratio=='1.50':
-						target_aspectRatio = '3240x2160'
+						target_aspectRatio = '4096x2731'
+						target = True
+					elif aspect_ratio=='1.51':
+						target_aspectRatio = '4096x2713'
+						target = True
+					elif aspect_ratio=='1.52':
+						target_aspectRatio = '4096x2695'
+						target = True
+					elif aspect_ratio=='1.55':
+						target_aspectRatio = '4096x2643'
+						target = True
+					elif aspect_ratio=='1.56':
+						target_aspectRatio = '4096x2626'
+						target = True
+					elif aspect_ratio=='1.60':
+						target_aspectRatio = '4096x2560'
+						target = True
+					elif aspect_ratio=='1.65':
+						target_aspectRatio = '4096x2482'
+						target = True
+					elif aspect_ratio=='1.66':
+						target_aspectRatio = '4096x2467'
 						target = True
 					elif aspect_ratio=='1.67':
-						target_aspectRatio = '3600x2160'
+						target_aspectRatio = '4096x2458'
+						target = True
+					elif aspect_ratio=='1.71':
+						target_aspectRatio = '4096x2395'
+						target = True
+					elif aspect_ratio=='1.77':
+						target_aspectRatio = '4096x2314'
 						target = True
 					elif aspect_ratio=='1.78':
-						target_aspectRatio = '3840x2160'
+						target_aspectRatio = '4096x2304'
+						target = True
+					elif aspect_ratio=='1.79':
+						target_aspectRatio = '4096x2288'
+						target = True
+					elif aspect_ratio=='1.80':
+						target_aspectRatio = '4096x2276'
+						target = True
+					elif aspect_ratio=='1.84':
+						target_aspectRatio = '4096x2226'
 						target = True
 					elif aspect_ratio=='1.85':
-						target_aspectRatio = '3840x2076'
+						target_aspectRatio = '4096x2214'
 						target = True
 					elif aspect_ratio=='1.90':
-						target_aspectRatio = '3840x2021'
+						target_aspectRatio = '4096x2156'
+						target = True
+					elif aspect_ratio=='1.91':
+						target_aspectRatio = '4096x2145'
+						target = True
+					elif aspect_ratio=='1.96':
+						target_aspectRatio = '4096x2090'
 						target = True
 					elif aspect_ratio=='2.00':
-						target_aspectRatio = '3840x1920'
+						target_aspectRatio = '4096x2048'
+						target = True
+					elif aspect_ratio=='2.07':
+						target_aspectRatio = '4096x1979'
+						target = True
+					elif aspect_ratio=='2.08':
+						target_aspectRatio = '4096x1969'
+						target = True
+					elif aspect_ratio=='2.10':
+						target_aspectRatio = '4096x1950'
+						target = True
+					elif aspect_ratio=='2.11':
+						target_aspectRatio = '4096x1940'
+						target = True
+					elif aspect_ratio=='2.17':
+						target_aspectRatio = '4096x1888'
+						target = True
+					elif aspect_ratio=='2.19':
+						target_aspectRatio = '4096x1870'
+						target = True
+					elif aspect_ratio=='2.20':
+						target_aspectRatio = '4096x1862'
+						target = True
+					elif aspect_ratio=='2.22':
+						target_aspectRatio = '4096x1843'
+						target = True
+					elif aspect_ratio=='2.26':
+						target_aspectRatio = '4096x1812'
+						target = True
+					elif aspect_ratio=='2.27':
+						target_aspectRatio = '4096x1804'
+						target = True
+					elif aspect_ratio=='2.28':
+						target_aspectRatio = '4096x1796'
+						target = True
+					elif aspect_ratio=='2.29':
+						target_aspectRatio = '4096x1789'
+						target = True
+					elif aspect_ratio=='2.33':
+						target_aspectRatio = '4096x1758'
 						target = True
 					elif aspect_ratio=='2.35':
-						target_aspectRatio = '3840x1634'
+						target_aspectRatio = '4096x1743'
 						target = True
 					elif aspect_ratio=='2.37':
-						target_aspectRatio = '3840x1620'
+						target_aspectRatio = '4096x1728'
 						target = True
 					elif aspect_ratio=='2.39':
-						target_aspectRatio = '3840x1600'
+						target_aspectRatio = '4096x1714'
 						target = True
 					elif aspect_ratio=='2.40':
-						target_aspectRatio = '3840x1600'
+						target_aspectRatio = '4096x1707'
 						target = True
 					elif aspect_ratio=='2.44':
-						target_aspectRatio = '3840x1574'
+						target_aspectRatio = '4096x1679'
+						target = True
+					elif aspect_ratio=='2.50':
+						target_aspectRatio = '4096x1638'
+						target = True
+					elif aspect_ratio=='2.52':
+						target_aspectRatio = '4096x1625'
+						target = True
+					elif aspect_ratio=='2.55':
+						target_aspectRatio = '4096x1606'
+						target = True
+					elif aspect_ratio=='2.59':
+						target_aspectRatio = '4096x1581'
+						target = True
+					elif aspect_ratio=='2.65':
+						target_aspectRatio = '4096x1546'
+						target = True
+					elif aspect_ratio=='2.66':
+						target_aspectRatio = '4096x1540'
+						target = True
+					elif aspect_ratio=='2.70':
+						target_aspectRatio = '4096x1517'
+						target = True
+					elif aspect_ratio=='2.75':
+						target_aspectRatio = '4096x1489'
+						target = True
+					elif aspect_ratio=='2.76':
+						target_aspectRatio = '4096x1484'
+						target = True
+					elif aspect_ratio=='2.77':
+						target_aspectRatio = '4096x1479'
+						target = True
+					elif aspect_ratio=='2.89':
+						target_aspectRatio = '4096x1417'
+						target = True
+					elif aspect_ratio=='2.91':
+						target_aspectRatio = '4096x1408'
 						target = True
 					elif aspect_ratio=='3.00':
-						target_aspectRatio = '3840x1280'
+						target_aspectRatio = '4096x1365'
+						target = True
+					elif aspect_ratio=='3.50':
+						target_aspectRatio = '4096x1170'
+						target = True
+					elif aspect_ratio=='3.56':
+						target_aspectRatio = '4096x1152'
+						target = True
+					elif aspect_ratio=='3.66':
+						target_aspectRatio = '4096x1119'
 						target = True
 					elif aspect_ratio=='4.00':
-						target_aspectRatio = '3840x960'
+						target_aspectRatio = '4096x1024'
+						target = True
+					elif aspect_ratio=='4.30':
+						target_aspectRatio = '4096x953'
+						target = True
+					elif aspect_ratio=='4.66':
+						target_aspectRatio = '4096x879'
+						target = True
+					elif aspect_ratio=='4.69':
+						target_aspectRatio = '4096x873'
+						target = True
+					elif aspect_ratio=='5.30':
+						target_aspectRatio = '4096x773'
+						target = True
+					elif aspect_ratio=='5.70':
+						target_aspectRatio = '4096x719'
+						target = True
+					elif aspect_ratio=='6.00':
+						target_aspectRatio = '4096x683'
 						target = True
 					else: 
-						window['-multiline-'].update('Aspect ratio for ' + output_prep +' is non-standard. Upscale ratio has been inferred. Double check output. \n', append=True)
 						target = False
 
 					if target == True:
-						command_str = r'ffmpeg -i "' + str(input) + '" -vf "scale=' + target_aspectRatio + ':flags=lanczos" -c:v libx264 -crf 13 -c:a aac -b:a 512k -preset slow "' + str(output) +'.mp4"'
-						subprocess.run(command_str, shell=True, stdout=subprocess.PIPE, stderr = subprocess.PIPE, check=True)
+						command_str = r'ffmpeg -i "' + str(input) + '" -vf "w3fdif=mode=frame, scale=' + target_aspectRatio + ':flags=lanczos" -c:v libx264 -crf 13 -c:a aac -b:a 512k -preset slow "' + str(output) +'.mp4"'
+						command = subprocess.run(command_str, shell=True, check=True, capture_output=True)
+						print(command.stdout)
 					elif target == False:
-						command_str = r'ffmpeg -i "' + str(input) + '" -vf "scale=w=3840:h=2160:sws_flags=lanczos:force_original_aspect_ratio=decrease:force_divisible_by=2" -c:v libx264 -crf 13 -c:a aac -b:a 512k -preset slow "' + str(output) +'.mp4"'
-						subprocess.run(command_str, shell=True, stdout=subprocess.PIPE, stderr = subprocess.PIPE, check=True)
-					
+						window['-multiline-'].update('Aspect ratio for ' + output_prep +' is non-standard. Please alert Digital Scholarship Librarian. \n', append=True)
+					else:
+						window['-multiline-'].update('An unanticipated error has occurred. Please alert Digital Scholarship Librarian. \n', append=True)
+
 					window['-multiline-'].update(output_prep+' complete'+'\n'+'\n', append=True)
 					status_number = status_number + 1
 					progress_bar.UpdateBar(status_number, file_number)
@@ -175,7 +373,7 @@ def the_gui():
 		event, values = window.read()
 
 		if event == '-help-':
-			window['-multiline-'].update('This application upscales any video file to 4K UHD. Use the browse buttons to select an input and output folder. Any videos in the input folder will be converted, one after another. If there is an error converting one of the files, the progress bar will go red and the application will stop converting the remaining files. Any video files converted before this are fine. Videos with standard aspect ratios will be upscaled to their equivalent in 4K UHD. Video files with a non-standard aspect ratio will have their aspect ratio forced during the upscale process. Double check the output to ensure that there are no issues with the aspect ratio. Once the progress bar is full and the application lets you know the process is done you can close the window. Do not close the window before this as it can halt the conversion process.'+'\n'+'\n', append=True)
+			window['-multiline-'].update('This application upscales any video file to Cinema 4K. Use the browse buttons to select an input and output folder. Any videos in the input folder will be converted, one after another. If there is an error converting one of the files, the progress bar will go red and the application will stop converting the remaining files. Any video files converted before this are fine. Videos with a standard or historical aspect ratio will be upscaled to their equivalent in 4K. Video files with an unknown aspect ratio will not be upscaled. This application takes into account 85 different aspect ratios, including unusual and isoteric aspect ratios. If your aspect ratio is not covered it is highly likely that the video needs to be cropped first.  Do not attempt to crop a video yourself, consult with the Digital Scholarship Librarian. Once the progress bar is full and the application lets you know the process is done you can close the window. Do not close the window before this as it can halt the conversion process.'+'\n'+'\n', append=True)
 	
 				
 		if event == 'Submit':
@@ -252,9 +450,3 @@ def the_gui():
 
 if __name__=='__main__':
 	the_gui()
-				
-					
-	
-		
-	
-	
